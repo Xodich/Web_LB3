@@ -15,13 +15,13 @@ class CreateCharactersTable extends Migration
     {
         Schema::create('characters', function (Blueprint $table) {
             $table->id();
-            $table->string('character_name'); // Имя
-            $table->string('character_tag');  // Тег (напр. Ближний бой)
-            $table->text('short_description'); // Краткое описание для карточки
-            $table->text('full_biography');    // Полное описание для модалки
-            $table->string('image_path')->nullable(); // Путь к фото
-            $table->date('release_date')->nullable(); // Дата (для теста мутатора)
-            $table->softDeletes(); // Расширенный уровень (мягкое удаление)
+            $table->string('character_name');
+            $table->string('character_tag');
+            $table->text('short_description');
+            $table->text('full_biography');
+            $table->string('image_path')->nullable();
+            $table->date('release_date')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }
